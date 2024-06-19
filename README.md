@@ -65,9 +65,9 @@ node seeds/index.js
 
 3. The server will be running on `http://localhost:3001`. You can test the API using Insomnia or any other API client.
 
-**Routes**
+## Routes
 
-Categories
+**Categories**
 
 - GET `/api/categories`
 - GET `/api/categories/:id`
@@ -75,7 +75,7 @@ Categories
 - PUT `/api/categories/:id`
 - DELETE `/api/categories/:id`
 
-Products
+**Products**
 
 - GET `/api/products`
 - GET `/api/products/:id`
@@ -83,7 +83,7 @@ Products
 - PUT `/api/products/:id`
 - DELETE `/api/products/:id`
 
-Tags
+**Tags**
 
 - GET `/api/tags`
 - GET `/api/tags/:id`
@@ -91,14 +91,14 @@ Tags
 - PUT `/api/tags/:id`
 - DELETE `/api/tags/:id`
 
-**Models**
+## Models
 
-Category
+**Category**
 
 - `id`: Integer, primary key, auto increment
 - `category_name`: String, not null
 
-Product
+**Product**
 
 - `id`: Integer, primary key, auto increment
 - `product_name`: String, not null
@@ -106,25 +106,27 @@ Product
 - `stock`: Integer, not null, default value of 10
 - `category_id`: Integer, references Category
 
-Tag
+**Tag**
 
 - `id`: Integer, primary key, auto increment
 - `tag_name`: String
 
-ProductTag
+**ProductTag**
 
 - `id`: Integer, primary key, auto increment
 - `product_id`: Integer, references Product
 - `tag_id`: Integer, references Tag
 
-**Associations**
+## Associations
 
 - `Product` belongs to `Category`
 - `Category` has many `Product`
 - `Product` belongs to many `Tag` through `ProductTag`
 - `Tag` belongs to many `Product` through `ProductTag`
-  **Seeding the Database**
-  To seed the database with initial data, run:
+
+## Seeding the Database
+
+To seed the database with initial data, run:
 
 ```bash
 node seeds/index.js
@@ -162,12 +164,11 @@ You can test the API endpoints using Insomnia or any other API client. Here are 
 - Body: JSON
 
 ```json
-Copy code
 {
-"product_name": "Updated Product",
-"price": 150.00,
-"stock": 10,
-"tagIds": [1, 2, 3, 4]
+  "product_name": "Updated Product",
+  "price": 150.0,
+  "stock": 10,
+  "tagIds": [1, 2, 3, 4]
 }
 ```
 
