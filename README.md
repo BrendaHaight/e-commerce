@@ -81,7 +81,7 @@ Products
 - GET `/api/products/:id`
 - POST `/api/products`
 - PUT `/api/products/:id`
-- DELETE /api/products/:id
+- DELETE `/api/products/:id`
 
 Tags
 
@@ -121,40 +121,47 @@ ProductTag
 
 - `Product` belongs to `Category`
 - `Category` has many `Product`
-  Product belongs to many Tag through ProductTag
-  Tag belongs to many Product through ProductTag
-  Seeding the Database
+- `Product` belongs to many `Tag` through `ProductTag`
+- `Tag` belongs to many `Product` through `ProductTag`
+  **Seeding the Database**
   To seed the database with initial data, run:
 
-bash
-Copy code
+```bash
 node seeds/index.js
+```
+
 This will populate the database with sample categories, products, tags, and product-tag associations.
 
-Testing with Insomnia
+## Testing with Insomnia
+
 You can test the API endpoints using Insomnia or any other API client. Here are some example requests:
 
-GET All Products
-Method: GET
-URL: http://localhost:3001/api/products
-POST New Product
-Method: POST
-URL: http://localhost:3001/api/products
-Body: JSON
-json
-Copy code
+**GET All Products**
+
+- Method: GET
+- URL: `http://localhost:3001/api/products`
+- POST New Product
+- Method: POST
+- URL: `http://localhost:3001/api/products`
+- Body: JSON
+
+```json
 {
-"product_name": "Basketball",
-"price": 200.00,
-"stock": 3,
-"category_id": 1,
-"tagIds": [1, 2, 3]
+  "product_name": "Basketball",
+  "price": 200.0,
+  "stock": 3,
+  "category_id": 1,
+  "tagIds": [1, 2, 3]
 }
-PUT Update Product
-Method: PUT
-URL: http://localhost:3001/api/products/:id
-Body: JSON
-json
+```
+
+**PUT Update Product**
+
+- Method: PUT
+- URL: `http://localhost:3001/api/products/:id`
+- Body: JSON
+
+```json
 Copy code
 {
 "product_name": "Updated Product",
@@ -162,13 +169,17 @@ Copy code
 "stock": 10,
 "tagIds": [1, 2, 3, 4]
 }
-DELETE Product
-Method: DELETE
-URL: http://localhost:3001/api/products/:id
-Walkthrough Video
+```
+
+**DELETE Product**
+
+- Method: DELETE
+- URL: `http://localhost:3001/api/products/:id`
+
+## Walkthrough Video
+
 A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met can be found here.
 
-License
-This project is licensed under the MIT License.
+## License
 
-Feel free to adjust the repository link, database credentials, and any other details specific to your project. This README provides a detailed overview and should help users understand and use your e-commerce back end application.
+This project is licensed under the MIT License.
