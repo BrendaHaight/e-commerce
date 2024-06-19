@@ -179,7 +179,7 @@ You can test the API endpoints using Insomnia or any other API client. Here are 
 
 ## Walkthrough Video
 
-A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met can be found [here](Demonstration.mp4)
+A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met can be found [here](https://drive.google.com/file/d/1Q1R4qqFx--K6iz42iVo2Tm1-wcVZgCvD/view?usp=drive_link)
 
 ## License
 
